@@ -257,14 +257,5 @@ namespace Player.Movement
         {
             return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
         }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.CompareTag("PickUp"))
-            {
-                speedBoost = true;
-                Destroy(other.gameObject);
-            }
-        }
     }
 }

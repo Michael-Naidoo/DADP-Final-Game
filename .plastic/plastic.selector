@@ -1,4 +1,0 @@
-repository "DADP-Final-Game@Langa13@cloud"
-  path "/"
-    br "/main"
-    co "/main"

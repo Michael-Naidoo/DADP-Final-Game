@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    [SerializeField] private float interactRange = 2f;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
@@ -24,7 +24,7 @@ public class PlayerInteract : MonoBehaviour
     public NPCInteractable GetInteractableObject()
     {
         List<NPCInteractable> npcInteractableList = new List<NPCInteractable>();
-        float interactRange = 4f;
+        interactRange = 4f;
         Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
         foreach (Collider collider in colliderArray)
         {

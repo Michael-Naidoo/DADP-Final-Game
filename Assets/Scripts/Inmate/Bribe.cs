@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Bribe : MonoBehaviour
+public partial class Bribe : MonoBehaviour
 {
     public int playerDrugs = 0; // Assuming starting currency is 0
     public int requiredCurrency = 2; // Amount of drugs needed

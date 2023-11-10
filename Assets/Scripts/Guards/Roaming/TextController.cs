@@ -26,7 +26,7 @@ public class TextController : MonoBehaviour
             {
                 textToShowWithOneOrHigher.SetActive(false);
                 textToDisable.SetActive(true);
-                number = Mathf.Max(0, number + 1); // Ensures number is not negative
+                number = Mathf.Max(0, number + 1);
             }
         }
     }

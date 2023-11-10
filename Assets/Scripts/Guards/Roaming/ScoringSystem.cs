@@ -15,17 +15,6 @@ public class ScoringSystem : MonoBehaviour
         {
             //collectSound.Play();
             theScore++;
-            /*Text textComponent = scoreText.GetComponent<Text>();
-
-           
-            if (textComponent != null)
-            {
-                textComponent.text = "Drugs: " + theScore;
-            }
-            else
-            {
-                Debug.LogWarning("Text component not found on the scoreText GameObject.");
-            }*/
 
             scoreText.GetComponent<TMPro.TextMeshProUGUI>().text = "Drugs: " + theScore;
         }

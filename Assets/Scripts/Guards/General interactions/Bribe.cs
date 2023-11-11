@@ -51,28 +51,19 @@ namespace Guards.General_interactions
                 {
                     state = bribe_state.Bribed;
                     bribeCooldownTimer = bribeCooldown;
-                    bribeTimer = gracePeriod;
                 }
                 else if (bribeTimer <= 0)
                 {
                     state = bribe_state.Attacking;
                     bribeCooldownTimer = bribeCooldown;
-                    bribeTimer = gracePeriod;
                 }
             }
         }
 
         public void BribeReset()
         {
-            if (state == bribe_state.Bribed)
-            {
-                bribeCooldownTimer -= Time.deltaTime;
-                if (bribeCooldownTimer <= 0)
-                {
-                    state = bribe_state.Waiting;
-                }
-            }
-            else
+            bribeCooldownTimer -= Time.deltaTime;
+            if (bribeCooldownTimer <= 0)
             {
                 state = bribe_state.Waiting;
             }
@@ -80,18 +71,13 @@ namespace Guards.General_interactions
 
         public void TakeAction()
         {
-            if(state == bribe_state.Attacking && !guardFOV.canSeePlayer)
-            {
-                BribeReset();
-            }
-            else if(state == bribe_state.Bribed)
-            {
-                bribeTimer = gracePeriod;
-                BribeReset();
-            }
-            else  if (guardFOV.canSeePlayer)
+            if (guardFOV.canSeePlayer)
             {
                 GracePeriodCheck();
+            }
+            else if(state != bribe_state.Waiting)
+            {
+                BribeReset();
             }
         }
     }

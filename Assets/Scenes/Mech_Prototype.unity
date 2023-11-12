@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1853248024858730867, guid: 9adb1b3f5a969f44da601b50daf81928, type: 3}
-      propertyPath: speech
-      value: no1
-      objectReference: {fileID: 0}
     - target: {fileID: 5363985485783243676, guid: 9adb1b3f5a969f44da601b50daf81928, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -449,17 +445,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1919757153 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1919757153, guid: c35f24a5c1a61084b9ac36102f41b308, type: 3}
-  m_PrefabInstance: {fileID: 1401278318529884829}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1952912729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,10 +571,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224194222, guid: c35f24a5c1a61084b9ac36102f41b308, type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 1919757153}
     - target: {fileID: 1401278318238652553, guid: c35f24a5c1a61084b9ac36102f41b308, type: 3}
       propertyPath: m_RootOrder
       value: 4

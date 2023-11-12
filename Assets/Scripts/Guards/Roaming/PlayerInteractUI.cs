@@ -11,9 +11,10 @@ public class PlayerInteractUI : MonoBehaviour
 
     private void Update()
     {
-        if (playerInteract.GetInteractableObject() != null)
+        NPCInteractable interactableObject = playerInteract.GetInteractableObject();
+        if (interactableObject != null)
         {
-            Show(playerInteract.GetInteractableObject());
+            Show(interactableObject);
         }
         else
         {

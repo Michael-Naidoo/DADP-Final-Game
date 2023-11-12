@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Drug
+  - Collectible
+  - 'Ground '
+  - Guard
   layers:
   - Default
   - TransparentFX

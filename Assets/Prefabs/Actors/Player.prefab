@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 1401278318238652559}
   - component: {fileID: 224194221}
   - component: {fileID: 224194222}
+  - component: {fileID: 6307819159702419963}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -403,7 +404,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDist: 10
   textBox: {fileID: 1430879446}
-  text: {fileID: 0}
+  text: {fileID: 1919757153}
+--- !u!114 &6307819159702419963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401278318238652556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8be644723f47d5943b36bd2d539df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drugs: 0
+  hp: 0
+  maxHP: 10
 --- !u!1 &1401278318341244224
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +463,6 @@ GameObject:
   - component: {fileID: 1401278318651068902}
   - component: {fileID: 1401278318651068903}
   - component: {fileID: 1401278318651068900}
-  - component: {fileID: 1402047345}
   m_Layer: 6
   m_Name: PlayerObj
   m_TagString: Untagged
@@ -535,18 +550,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1402047345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401278318651068906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27247f91cd0c5fc4aa77a403ecf4f367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDist: 0
-  textBox: {fileID: 0}
-  text: {fileID: 0}

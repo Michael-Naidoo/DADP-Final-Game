@@ -1,5 +1,6 @@
 using System;
 using Guards.Roaming;
+using Player.Interactions;
 using UnityEngine;
 
 namespace Guards.General_interactions
@@ -7,6 +8,7 @@ namespace Guards.General_interactions
     public class Bribe : MonoBehaviour
     {
         [SerializeField] private float bribeTimer;
+        [SerializeField] private int bribeCost;
         [SerializeField] private float gracePeriod;
         [SerializeField] private float bribeCooldown;
         [SerializeField] private float bribeCooldownTimer;
@@ -14,6 +16,8 @@ namespace Guards.General_interactions
         public guard_type type;
         public KeyCode bribe = KeyCode.E;
         private GuardFOV guardFOV;
+        private GameObject player;
+        private PlayerInfo pI;
 
         public enum bribe_state
         {
@@ -35,6 +39,8 @@ namespace Guards.General_interactions
             bribeTimer = gracePeriod;
             bribeCooldownTimer = bribeCooldown;
             guardFOV = GetComponent<GuardFOV>();
+            player = GameObject.FindWithTag("Player");
+            pI = player.GetComponent<PlayerInfo>();
         }
 
         private void FixedUpdate()
@@ -47,7 +53,7 @@ namespace Guards.General_interactions
             if (state == bribe_state.Waiting)
             {
                 bribeTimer -= Time.deltaTime;
-                if (bribeTimer > 0 && Input.GetKey(bribe))
+                if (bribeTimer > 0 && Input.GetKey(bribe) && pI.drugs > bribeCost)
                 {
                     state = bribe_state.Bribed;
                     bribeCooldownTimer = bribeCooldown;

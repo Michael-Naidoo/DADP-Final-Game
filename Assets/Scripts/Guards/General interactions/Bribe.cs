@@ -102,7 +102,7 @@ namespace Guards.General_interactions
                     GracePeriodCheck();
                 }
             }
-            else if (type == guard_type.Key_Holder)
+            else
             {
                 if (Input.GetKey(bribe) && pI.drugs >= bribeCost)
                 {

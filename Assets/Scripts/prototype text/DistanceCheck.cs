@@ -25,7 +25,7 @@ namespace prototype_text
             Collider[] allColliders = Physics.OverlapSphere(transform.position, dist);
             for (int i = 0; i < allColliders.Length; i++)
             {
-                if (allColliders[i].CompareTag("Guard"))
+                if (allColliders[i].CompareTag("Guard") || allColliders[i].CompareTag("Inmate"))
                 {
                     if (guard  == null)
                     {

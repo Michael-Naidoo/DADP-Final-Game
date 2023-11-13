@@ -24,7 +24,7 @@ public class GameManagerScript : MonoBehaviour
         {
             startWithGame();
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.Escape) && !canvas.activeSelf)
         {
             canvas.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
@@ -34,12 +34,12 @@ public class GameManagerScript : MonoBehaviour
         {
             closeRule();
         }  
-        else if (Input.GetKeyDown(KeyCode.R)) 
+        else if (Input.GetKeyDown(KeyCode.R) && mainMenu.activeSelf) 
         { 
             Rule();
             Debug.Log("not the problem");
         }   
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Backspace) && mainMenu.activeSelf)
         {
             quit();
         }

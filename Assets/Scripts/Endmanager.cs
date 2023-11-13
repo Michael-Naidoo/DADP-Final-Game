@@ -33,6 +33,24 @@ public class Endmanager : MonoBehaviour
         {
             win.SetActive(true);
         }
+
+        if (lose.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (lose.activeSelf && Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Application.Quit();
+        }
+
+        if (win.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (win.activeSelf && Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Application.Quit();
+        }
     }
 
     int Win()

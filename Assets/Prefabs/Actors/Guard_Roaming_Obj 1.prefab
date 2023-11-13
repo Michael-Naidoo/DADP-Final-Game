@@ -155,6 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd7688afe7b4524ca843d090e97924f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPos:
+  - {fileID: 0}
 --- !u!54 &5363985485783243653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -230,6 +232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speech: no1
+  attacking: 
+  bribed: 
+  waiting: 
 --- !u!114 &6743300049429012576
 MonoBehaviour:
   m_ObjectHideFlags: 0

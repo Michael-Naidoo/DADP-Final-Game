@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4687229528436784497}
   - component: {fileID: 2101859204708006477}
   - component: {fileID: 6886265141689027433}
+  - component: {fileID: 489925975}
   m_Layer: 0
   m_Name: Guard_Idle
-  m_TagString: Untagged
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
   bribeCooldown: 0
   bribeCooldownTimer: 0
   state: 0
-  type: 0
+  type: 2
   bribe: 101
 --- !u!114 &6886265141689027433
 MonoBehaviour:
@@ -125,6 +126,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speech: hello
+  attacking: 
+  bribed: 
+  waiting: 
+--- !u!114 &489925975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044077536175306027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c312c6e68cf1ab448ca1f906807d2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 10
+  angle: 360
+  player: {fileID: 0}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIaObstruction:
+    serializedVersion: 2
+    m_Bits: 8
+  canSeePlayer: 0
 --- !u!1001 &6870867589757495234
 PrefabInstance:
   m_ObjectHideFlags: 0

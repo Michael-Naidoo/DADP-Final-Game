@@ -8,6 +8,8 @@ TagManager:
   - Collectible
   - 'Ground '
   - Guard
+  - Target
+  - Inmate
   layers:
   - Default
   - TransparentFX

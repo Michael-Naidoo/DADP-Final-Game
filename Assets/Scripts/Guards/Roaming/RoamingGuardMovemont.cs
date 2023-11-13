@@ -33,9 +33,10 @@ namespace Guards.Roaming
 
         private void OnTriggerEnter(Collider other)
         {
+            
             if (other.CompareTag("Target"))
             {
-                if (targetIndex < targetPos.Length)
+                if (targetIndex < (targetPos.Length - 1))
                 {
                     targetIndex++;
                 }
@@ -43,6 +44,7 @@ namespace Guards.Roaming
                 {
                     targetIndex = 0;
                 }
+                Debug.Log(targetIndex);
             }
         }
     }

@@ -352,6 +352,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 225253473367323469, guid: d158b039e39958848adf97b5c7de856e, type: 3}
+      propertyPath: m_text
+      value: RULES
+      objectReference: {fileID: 0}
+    - target: {fileID: 225253473588298077, guid: d158b039e39958848adf97b5c7de856e, type: 3}
+      propertyPath: m_Text
+      value: RULES
+      objectReference: {fileID: 0}
     - target: {fileID: 1876715637584383811, guid: d158b039e39958848adf97b5c7de856e, type: 3}
       propertyPath: m_Name
       value: Main Menu

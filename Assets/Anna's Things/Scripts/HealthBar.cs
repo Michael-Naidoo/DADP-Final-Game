@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     public Slider healthBar;
     public float maxTime = 60.0f;  // Set the maximum time in seconds
-    private float currentTime;
+    public float currentTime;
     public uimanager uiManager;
 
     void Start()

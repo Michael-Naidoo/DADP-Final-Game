@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Player.Camera
@@ -11,11 +12,16 @@ namespace Player.Camera
 
         private float xRotation;
         private float yRotation;
-        
+
+
+        private void Awake()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
 
         private void Update()
-        { Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+        { 
             
             //get mouse input
             float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;

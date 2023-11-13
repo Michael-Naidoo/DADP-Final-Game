@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8f9a6c5f7869048a56fc198d4313f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 0.5
-  attackIntervalMax: 0.5
+  attackRadius: 1.5
+  attackIntervalMax: 1
 --- !u!1001 &4739360461707992260
 PrefabInstance:
   m_ObjectHideFlags: 0

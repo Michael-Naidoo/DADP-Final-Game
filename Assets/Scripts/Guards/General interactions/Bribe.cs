@@ -18,6 +18,8 @@ namespace Guards.General_interactions
         private GuardFOV guardFOV;
         private GameObject player;
         private PlayerInfo pI;
+        private KeyCollector kC;
+        
 
         public enum bribe_state
         {
@@ -102,11 +104,21 @@ namespace Guards.General_interactions
                     GracePeriodCheck();
                 }
             }
-            else
+            else if (type == guard_type.Regular)
             {
-                if (Input.GetKey(bribe) && pI.drugs >= bribeCost)
+                if (Input.GetKey(bribe) && pI.drugs >= bribeCost && guardFOV.canSeePlayer)
                 {
                     state = bribe_state.Bribed;
+                }
+            }
+            else if (type == guard_type.Key_Holder)
+            {
+                if (Input.GetKey(bribe) && pI.drugs >= bribeCost && guardFOV.canSeePlayer && state !=bribe_state.Bribed)
+                {
+                    state = bribe_state.Bribed;
+                    kC = pI.keys[pI.keyRef].GetComponent<KeyCollector>();
+                    kC.CollectKey();
+                    pI.keyRef++;
                 }
             }
         }

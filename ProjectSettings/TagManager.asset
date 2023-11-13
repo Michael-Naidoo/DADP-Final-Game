@@ -10,6 +10,7 @@ TagManager:
   - Guard
   - Target
   - Inmate
+  - Mother
   layers:
   - Default
   - TransparentFX

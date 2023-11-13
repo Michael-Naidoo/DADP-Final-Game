@@ -9,11 +9,14 @@ namespace Guards.Roaming
         private NavMeshAgent navMesh;
         private GuardFOV guardFOV;
         private General_interactions.Bribe bribe; 
+        [SerializeField] private GameObject[] targetPos;
+        private int targetIndex;
         private void Start()
         {
             navMesh = GetComponent<NavMeshAgent>();
             guardFOV = GetComponent<GuardFOV>();
             bribe = GetComponent<General_interactions.Bribe>();
+            targetIndex = 0;
         }
 
         private void FixedUpdate()
@@ -24,7 +27,22 @@ namespace Guards.Roaming
             }
             else
             {
-                navMesh.SetDestination(transform.position);
+                navMesh.SetDestination(targetPos[targetIndex].transform.position);
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Target"))
+            {
+                if (targetIndex < targetPos.Length)
+                {
+                    targetIndex++;
+                }
+                else
+                {
+                    targetIndex = 0;
+                }
             }
         }
     }

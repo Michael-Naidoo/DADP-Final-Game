@@ -53,7 +53,7 @@ namespace Guards.General_interactions
             if (state == bribe_state.Waiting)
             {
                 bribeTimer -= Time.deltaTime;
-                if (bribeTimer > 0 && Input.GetKey(bribe) && pI.drugs > bribeCost)
+                if (bribeTimer > 0 && Input.GetKey(bribe) && pI.drugs >= bribeCost)
                 {
                     state = bribe_state.Bribed;
                     bribeCooldownTimer = bribeCooldown;
@@ -86,18 +86,28 @@ namespace Guards.General_interactions
 
         public void TakeAction()
         {
-            if(state == bribe_state.Attacking && !guardFOV.canSeePlayer)
+            if (type == guard_type.Roaming)
             {
-                BribeReset();
+                if(state == bribe_state.Attacking && !guardFOV.canSeePlayer)
+                {
+                    BribeReset();
+                }
+                else if(state == bribe_state.Bribed)
+                {
+                    bribeTimer = gracePeriod;
+                    BribeReset();
+                }
+                else  if (guardFOV.canSeePlayer)
+                {
+                    GracePeriodCheck();
+                }
             }
-            else if(state == bribe_state.Bribed)
+            else if (type == guard_type.Key_Holder)
             {
-                bribeTimer = gracePeriod;
-                BribeReset();
-            }
-            else  if (guardFOV.canSeePlayer)
-            {
-                GracePeriodCheck();
+                if (Input.GetKey(bribe) && pI.drugs >= bribeCost)
+                {
+                    state = bribe_state.Bribed;
+                }
             }
         }
     }

@@ -28,7 +28,7 @@ public class HealthBar : MonoBehaviour
         {
             // Timer has reached zero, handle this as needed (e.g., game over, reset, etc.)
             Debug.Log("Time's up!");
-            uiManager.gameOver();
+            //uiManager.gameOver();
         }
     }
 }

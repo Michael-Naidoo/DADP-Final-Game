@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drug: {fileID: 878508120028929972, guid: 9ba5e0ce5808c1a4aa838deba22c6785, type: 3}
-  maxSpawnTime: 10
+  maxSpawnTime: 30

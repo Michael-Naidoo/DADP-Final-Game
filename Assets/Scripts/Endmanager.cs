@@ -59,7 +59,7 @@ public class Endmanager : MonoBehaviour
 
             return 0;
 
-        else if (pI.keyRef == (pI.keys.Length - 1))
+        else if (pI.keyRef == pI.keys.Length)
             
             return 1;
 
